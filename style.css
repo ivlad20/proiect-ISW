@@ -1,0 +1,21 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+nav {
+    background-color: rgba(25, 62, 184, 0.856);
+    padding: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: 'Cascadia Code';
+    background-color: aqua;
+    padding: 10px;
+}
