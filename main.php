@@ -1,10 +1,19 @@
+<?php
+session_start();
+    include("connection.php");
+    include("functions.php");
+
+    $user_data = check_login($con);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OGX</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +25,7 @@
                 </a>
             </li>
             <li>
-                <a href="cont.html" class="navbutton">
+                <a href="login.php" class="navbutton">
                     <img class="icon" src="cont.png" alt="cont">  Contul tau
                 </a>
             </li>
