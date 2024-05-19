@@ -14,6 +14,7 @@ function check_login($con) {
                 return $user_data;
             }
     }
+
 }
 
 function random_num($length) {
@@ -32,3 +33,4 @@ function random_num($length) {
 
     return $text;
 }
+
