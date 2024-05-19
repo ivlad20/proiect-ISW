@@ -16,7 +16,7 @@
     }
     if (isset($_POST['search'])) {
         $search = $_POST['search'];
-        $query = "SELECT * FROM posts WHERE brand LIKE '$search' OR model LIKE '$search'";
+        $query = "SELECT * FROM posts WHERE brand LIKE '$search' OR model LIKE '$search' OR category LIKE '$search' OR subcategory LIKE '$search' OR `description` LIKE '$search'";
         $posts = mysqli_query($con, $query);
     }
     
@@ -37,7 +37,7 @@
         <?php
          while($row = $posts->fetch_assoc()) {
             echo '<a href="post.php?id=' . $row["id"] . '"<div class="product">';
-            echo '<img src="' . $row["link_poza"] . '"alt="Product 1" id="display_picture">';
+            echo "<img src='Posts/" . $row["id"] . "/0.png' alt='da'>";
             echo '<div class="product-details">';
             echo '<h3>' . $row["title"] . '</h3>';
             echo '<p>$' . $row["price"] . '</p>';

@@ -29,7 +29,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.php">MyOnlineStore</a>
+            <a href="products_display.php">MyOnlineStore</a>
         </div>
         <form method="POST" action="products_display.php">
             <div class="search-bar">
@@ -37,7 +37,7 @@
             </div>
         </form>
         <nav>
-            <a href="new.php">Home</a>
+            <a href="products_display.php">Home</a>
             
             <?php
                 if(isset($user_data)) {

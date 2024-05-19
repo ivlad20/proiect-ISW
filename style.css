@@ -185,12 +185,13 @@ a {
 }
 #table_div {
     margin: auto;
-
-    background-color: white;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
 }
 .image-table {
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     
 }
 .image-table:hover {
@@ -222,7 +223,7 @@ a {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 50px;
     cursor: pointer;
     transition: color 0.3s ease-in-out; /* Add transition for color change */
 }
@@ -237,4 +238,8 @@ a {
 #img150 {
     width: 150px;
     height: 150px;
+    border-radius: 6px;
+}
+td {
+    padding: 10px;
 }
