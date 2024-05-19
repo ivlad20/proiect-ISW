@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     include("connection.php");
     include("functions.php");
 
@@ -13,7 +13,7 @@ session_start();
 
             //read from database
             
-            $query = "select * from signup where username = '$username' limit 1";
+            $query = "SELECT * FROM signup WHERE username = '$username' LIMIT 1";
 
             $result = mysqli_query($con, $query);
 
@@ -27,7 +27,7 @@ session_start();
                     if($user_data['password'] === $password) {
 
                         $id = $_SESSION['user_id'] = $user_data['user_id'];
-                        header("Location: main.php");
+                        header("Location: index.php");
                         die;
                     }
                 }
@@ -53,14 +53,25 @@ session_start();
     <div id="signup">
         <h1>Login form</h1><br><br>
         <form name="signup" method="POST">
-            <label for="username">Nume de utilizator: </label>
+            <div class="container-signup">
+
+            <div>
+            <label for="username">Nume </label>
             <input type="text" id="username" name="username"><br><br>
-            <label for="password">Parola: </label>
-            <input type="text" name="password" id="password"><br><br>
-            <input id="button" type="submit" value="Login">
-            <button id="button">
-                <a href="signup.php">Sign up</a>
-            </button>
+            </div>
+
+            <div>
+            <label for="password">Parola </label>
+            <input type="password" name="password" id="password"><br><br>
+            </div>
+
+            <div style="display: flex">
+                <input id="button" type="submit" value="Login">
+                <button id="button">
+                    <a href="signup.php">Sign up</a>
+                </button>
+            </div>
+            </div>
         </form>
         
     </div>
