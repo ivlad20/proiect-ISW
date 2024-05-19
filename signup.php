@@ -28,6 +28,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,25 +36,39 @@ session_start();
     <link rel="stylesheet" type="text/css" href="signup.css">
     <title>Sign up page</title>
 </head>
+
 <body>
+
+    <!-- <img src="folder_post/post_<?= 1 ?>/img1.png" alt=""> -->
+
     <div id="signup">
         <h1>Sign up form</h1><br><br>
 
         <form name="signup" method="POST">
-            <label for="email">Email: </label>
-            <input type="email" id="email" name="email"><br><br>
+            <div class="container-signup">
+            <div>
+                <label for="email">Email </label>
+                <input type="email" id="email" name="email"><br><br>
+            </div>
 
-            <label for="username">Nume de utilizator: </label>
+            <div>
+            <label for="username">Nume </label>
             <input type="text" id="username" name="username"><br><br>
+            </div>
 
-            <label for="password">Parola: </label>
-            <input type="text" name="password" id="password"><br><br>
+            <div>
+            <label for="password">Parola </label>
+            <input type="password" name="password" id="password"><br><br>
+            </div>
+            
+            <div style="display: flex">
+                <input id="button" type="submit" value="Sign up">
+                <button id="button">
+                    <a href="login.php">Login</a>
+                </button>
+            </div>
+            </div>
 
-            <input id="button" type="submit" value="Sign up">
-
-            <button id="button">
-                <a href="login.php">Login</a>
-            </button>
         </form>
     </div>
 </body>
