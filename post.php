@@ -33,11 +33,11 @@
         </div>
         <form method="POST" action="products_display.php">
             <div class="search-bar">
-                <input type="text" placeholder="Search for products" name="search">
+                <input type="text" placeholder="Cauta produse..." name="search">
             </div>
         </form>
         <nav>
-            <a href="products_display.php">Home</a>
+            <a href="products_display.php">Acasa</a>
             
             <?php
                 if(isset($user_data)) {
